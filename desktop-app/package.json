@@ -16,7 +16,7 @@
     "electron-packager": "^13.0.1"
   },
   "dependencies": {
-    "jquery": "^3.5.1",
+    "jquery": "^3.7.1",
     "jsdom": "^16.2.1",
     "leaflet": "^1.6.0",
     "leaflet-ais-tracksymbol": "^1.6.0",
