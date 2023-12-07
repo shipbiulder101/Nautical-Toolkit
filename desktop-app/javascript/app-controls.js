@@ -30,7 +30,8 @@
     });
   };
 
-  document.onreadystatechange = function () {
+  window.onload = function () {
+    console.log("Document loaded");
     if (document.readyState == "complete") {
       init();
     }

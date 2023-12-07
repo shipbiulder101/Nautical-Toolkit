@@ -21,7 +21,12 @@ function createWindow() {
         resizable: true,  
         fullscreenable: false,
         fullscreen: false ,
-        icon: image
+        icon: image,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+            enableRemoteModule: true
+        }
     })
 
     win.setMinimumSize(500,500);
