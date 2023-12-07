@@ -1,0 +1,13 @@
+.app-input-time{
+    font-family: "Segoe UI";
+    border: none;
+    border-radius: 5px;
+}
+
+.app-input-time :focus{
+    outline: none;
+}
+
+#app-tide-input{
+    margin: auto;
+}

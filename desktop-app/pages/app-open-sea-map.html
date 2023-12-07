@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Nautical Tools: Openseamap</Title>
+        <link rel="stylesheet" href="../css/app-style.css">
+        <script type="text/javascript" src="../javascript/app-controls.js"></script>
+        <link rel="stylesheet" href="../node_modules/leaflet/dist/leaflet.css">
+        <script type="text/javascript" src="../node_modules/leaflet/dist/leaflet.js"></script>
+        <script src=" https://unpkg.com/@joergdietrich/leaflet.terminator@1.0.0/L.Terminator.js"></script>
+        <script src="../externals/leaflet.mousecoordinate.js"></script>
+        <script src="../javascript/app-open-external-link.js"></script>
+        <link rel="stylesheet" href="../externals/leaflet.mousecoordinate.css">
+        <link rel="stylesheet" href="../css/app-open-sea-map-style.css">
+        <link rel="stylesheet" href="../css/app-main-menu.css">
+    </head>
+    <body>
+        <div id="app-titlebar">
+            <img src="../res/app-icon.png" alt="" id="app-logo">
+            <div id="app-title">Nautical Tools</div>
+            <div id="app-update">App updating</div>
+            <div id="titlebar-btns">
+                <button id="minimize-btn">-</button>
+                <button id="maximize-btn">&#9633</button>
+                <button id="close-btn">x</button>
+            </div>
+        </div>
+        <div id="app-main-menu">
+            <a href="../pages/main.html"><button class = "main-menu-btn" id = "main-menu-main-page">Main Page</button></a>
+            <a href="../pages/app-nautical-converter.html"><button class = "main-menu-btn" id = "main-menu-distance-btn">Nautical Converter</button></a>
+            <a href="../pages/app-tide-calculator.html"><button class = "main-menu-btn" id = "main-menu-tide-btn">Tide Calculator</button></a>
+            <a href="../pages/app-ais-tracking.html"><button class = "main-menu-btn" id = "main-menu-ais-btn">AIS</button></a>
+            <a href="../pages/app-open-sea-map.html"><button class="main-menu-btn" id="main-menu-map-btn">OpenSeaMap</button></a>
+            <a href="../pages/app-weather.html"><button class="main-menu-btn" id="main-menu-weather-btn">Weather</button></a>
+        </div>
+       <div id="app-body">
+           <div id="app-map"></div>
+           <script type="text/javascript" src="../javascript/app-open-sea-map.js"></script>
+        </div>
+    </body>
+</html>

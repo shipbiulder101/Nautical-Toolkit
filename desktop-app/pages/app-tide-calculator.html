@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nautical Tools: Tide Calculator</title>
+        <script type="text/javascript" src="../javascript/app-tide-calculator.js"></script>
+        <script type="text/javascript" src="../javascript/app-controls.js"></script>
+        <script type="text/javascript" src="../javascript/app-open-external-link.js"></script>
+        <link rel="stylesheet" href="../css/app-style.css">
+        <link rel="stylsheet" href="../css/tide-calculator-style.css">
+        <link rel="stylesheet" href="../css/app-main-menu.css">
+    </head>
+    <body>
+        <div id="app-titlebar">
+            <img src="../res/app-icon.png" alt="" id="app-logo">
+            <div id="app-update">App updating</div>
+            <div id="app-title">Nautical Tools</div>
+            <div id="titlebar-btns">
+                <button id="minimize-btn">-</button>
+                <button id="maximize-btn">&#9633</button>
+                <button id="close-btn">x</button>
+            </div>
+        </div>
+        <div id="app-main-menu">
+            <a href="../pages/main.html"><button class = "main-menu-btn" id = "main-menu-main-page">Main Page</button></a>
+            <a href="../pages/app-nautical-converter.html"><button class = "main-menu-btn" id = "main-menu-distance-btn">Nautical Converter</button></a>
+            <a href="../pages/app-tide-calculator.html"><button class = "main-menu-btn" id = "main-menu-tide-btn">Tide Calculator</button></a>
+            <a href="../pages/app-ais-tracking.html"><button class = "main-menu-btn" id = "main-menu-ais-btn">AIS</button></a>
+            <a href="../pages/app-open-sea-map.html"><button class="main-menu-btn" id="main-menu-map-btn">OpenSeaMap</button></a>
+            <a href="../pages/app-weather.html"><button class="main-menu-btn" id="main-menu-weather-btn">Weather</button></a>
+        </div>
+        <div id="app-body">
+            <div id="app-tide-input">
+                Time required:
+                <input type="time" name="app-tide-input-timereq" id="app-tide-input-timereq" class="app-input-time" required>
+                <br>
+                High water time:
+                <input type="time" name="app-tide-input-hwtime" id="app-tide-input-hwtime" class="app-input-time">
+                Height of tide:
+                <input type="text" name="app-tide-input-hwheigt" id="app-tide-input-hwheight" class="app-input-text-tide" required>
+                m
+                <br>
+                Low water time:
+                <input type="time" name="app-tide-input-lwtime" id="app-tide-input-lwtime" class="app-input-time" required>
+                Height of tide:
+                <input type="text" name="app-tide-input-lwheight" id="app-tide-input-lwheight" class="app-input-text-tide" required>
+                m
+                <input type="submit" id="app-btn-calculate" class="app-btn-input" onclick="calculate()" value="Calculate">
+                <input type="submit" id ="app-btn-reset" class="app-btn-input" onclick="reset()" value="Reset">
+            </div>
+            <div id="app-tide-output">
+                <p id="app-tide-result"></p>
+            </div>
+            <div id="app-tide-info">
+                <br>To use the tide calculator input the time at which the time required and the data for both low and high water. In order to obtain times and heights please consult the revlevant tide tables some websites are given.<br>
+                Tide tables:<br>
+                UK: <a onclick="openlink('https://www.bbc.co.uk/weather/coast-and-sea/tide-tables')" href="#">https://www.bbc.co.uk/weather/coast-and-sea/tide-tables</a><br>
+                US: <a onclick="openlink('https://tidesandcurrents.noaa.gov/tide_predictions.html')" href="#">https://tidesandcurrents.noaa.gov/tide_predictions.html</a>
+            </div>
+        </div>
+    </body>
+</html>

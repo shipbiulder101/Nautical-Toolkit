@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nautical Tools: Nautical Distance Converter</title>
+    <script type="text/javascript" src="../javascript/app-converter-distance.js"></script>
+    <script type="text/javascript" src="../javascript/app-converter-depth.js"></script>
+    <script type="text/javascript" src="../javascript/app-converter-temp.js"></script>
+    <script type="text/javascript" src="../javascript/app-converter-general.js"></script>
+    <script type="text/javascript" src="../javascript/app-controls.js"></script>
+    <link rel="stylesheet" href="../css/app-style.css">
+    <link rel="stylesheet" href="../css/app-converter-style.css">
+    <link rel="stylesheet" href="../css/app-main-menu.css">
+</head>
+
+<body>
+    <div id="app-titlebar">
+        <img src="../res/app-icon.png" alt="" id="app-logo">
+        <div id="app-title">Nautical Tools</div>
+        <div id="app-update">App updating</div>
+        <div id="titlebar-btns">
+            <button id="minimize-btn">-</button>
+            <button id="maximize-btn">&#9633</button>
+            <button id="close-btn">x</button>
+        </div>
+    </div>
+    <div id="app-main-menu">
+        <a href="../pages/main.html"><button class = "main-menu-btn" id = "main-menu-main-page">Main Page</button></a>
+        <a href="../pages/app-nautical-converter.html"><button class = "main-menu-btn" id = "main-menu-distance-btn">Nautical Converter</button></a>
+        <a href="../pages/app-tide-calculator.html"><button class = "main-menu-btn" id = "main-menu-tide-btn">Tide Calculator</button></a>
+        <a href="../pages/app-ais-tracking.html"><button class = "main-menu-btn" id = "main-menu-ais-btn">AIS</button></a>
+        <a href="../pages/app-open-sea-map.html"><button class="main-menu-btn" id="main-menu-map-btn">OpenSeaMap</button></a>
+        <a href="../pages/app-weather.html"><button class="main-menu-btn" id="main-menu-weather-btn">Weather</button></a>
+    </div>
+    <div id="app-body">
+        <div id="app-distance-converter">
+            <Table class="app-converter-format-table">
+                <tr class="app-converter-format-table">
+                    <td class="app-converter-format-table">
+                        <select id="distance-dropdown-1" class="app-converter-dropdown">
+                            <option value="1">Miles</option>
+                            <option value="2">Nautical Miles</option>
+                            <option value="3">Cables</option>
+                        </select>
+                    </td>
+                    <td class="app-converter-format-table">
+                        <select id="distance-dropdown-2" class="app-converter-dropdown">
+                            <option value="1">Miles</option>
+                            <option value="2">Nautical Miles</option>
+                            <option value="3">Cables</option>
+                        </select>
+                    </td>
+                </tr>
+            </Table>
+            <input type="text" id="app-converter-input-distance">
+            <input class="app-convert-btn" type="button" value="Calclulate" onclick="convertDistance();">
+            <input class="app-convert-btn" type="button" value="Reset" onclick="reset();">
+            <p id="app-converter-result-distance"></p>
+        </div>
+        <div id="app-depth-converter">
+            <table class="app-converter-format-table">
+                <tr class="app-converter-format-table">
+                    <td class="app-converter-format-table">
+                        <select id="depth-dropdown-1" class="app-converter-dropdown">
+                            <option value="1">Meters</option>
+                            <option value="2">Feet</option>
+                            <option value="3">Fathoms</option>
+                        </select>
+                    </td>
+                    <td class="app-converter-format-table">
+                        <select id="depth-dropdown-2" class="app-converter-dropdown">
+                            <option value="1">Meters</option>
+                            <option value="2">Feet</option>
+                            <option value="3">Fathoms</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <input type="text" id="app-converter-input-depth">
+            <input class="app-convert-btn" type="button" value="Calclulate" onclick="convertDepth();">
+            <input class="app-convert-btn" type="button" value="Reset" onclick="reset();">
+            <p id="app-converter-result-depth"></p>
+        </div>
+        <div id="app-temp-converter">
+            <table class="app-converter-format-table">
+                <tr class="app-converter-format-table">
+                    <td class="app-converter-format-table">
+                        <select id="temp-dropdown-1" class="app-converter-dropdown">
+                            <option value="1">Celcius</option>
+                            <option value="2">Farenheit</option>
+                        </select>
+                    </td>
+                    <td class="app-converter-format-table">
+                        <select id="temp-dropdown-2" class="app-converter-dropdown">
+                            <option value="1">Celcius</option>
+                            <option value="2">Farenheit</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <input type="text" id="app-converter-input-temp">
+            <input class="app-convert-btn" type="button" value="Calclulate" onclick="convertTemp();">
+            <input class="app-convert-btn" type="button" value="Reset" onclick="reset();">
+            <p id="app-converter-result-temp"></p>
+        </div>
+    </div>
+</body>
+
+</html>

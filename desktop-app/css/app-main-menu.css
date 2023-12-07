@@ -1,0 +1,32 @@
+/*sets the width of each button in the menu bar to the appropriate size*/
+#main-menu-main-page{
+    width: 150px;
+}
+
+#main-menu-distance-btn{
+    width: 200px;
+}
+
+#main-menu-ais-btn{
+    width: 50px;
+}
+
+#main-menu-map-btn{
+    width: 150px;
+}
+
+.main-menu-btn {
+    border-radius: 0;
+}
+
+#app-main-menu{
+    height: 37px;
+    width: 100%;
+    background-color: #202020;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+::-webkit-scrollbar{
+    height: 5px;
+}

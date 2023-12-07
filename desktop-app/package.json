@@ -1,0 +1,25 @@
+{
+  "name": "nautical-tools",
+  "productName": "Nautical Tools",
+  "version": "0.3.1",
+  "description": "Nautical Tools",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-win": "electron-packager . desktop-app",
+    "build-mac": "electron-packager . --platform=darwin desktop-app"
+  },
+  "author": "Paul Rankin",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.0.4",
+    "electron-packager": "^13.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "jsdom": "^16.2.1",
+    "leaflet": "^1.6.0",
+    "leaflet-ais-tracksymbol": "^1.6.0",
+    "leaflet-tracksymbol": "^1.0.8"
+  }
+}

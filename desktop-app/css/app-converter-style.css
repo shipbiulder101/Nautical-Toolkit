@@ -1,0 +1,32 @@
+/*sets up the hidden table that acts as as layout guide for the converter*/
+.app-converter-format-table{
+    border: none;
+    float: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*gives buttons and dropdowns custom styling*/
+.app-converter-dropdown{
+    background-color: #292929;
+    color: white;
+    border-color: white;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.app-convert-btn{
+    font-family: 'Segoe UI';
+    background-color: #383838;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    transition: 0.4s;
+}
+
+.app-convert-btn:hover{
+    background-color: white;
+    color: black;
+}
