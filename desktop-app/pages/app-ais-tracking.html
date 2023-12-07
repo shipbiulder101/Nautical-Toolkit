@@ -24,8 +24,8 @@
     <div id="app-main-menu">
     </div>
     <div id="app-body">
+        <!--Sets the stylings of the map, required by embedded map-->
         <script type="text/javascript">
-            // Map appearance
             var width="100%";         // width in pixels or percentage
             var height="800";         // height in pixels
             var latitude="51.121";     // center latitude (decimal degrees)
@@ -33,6 +33,7 @@
             var zoom="8";             // initial zoom (between 3 and 18)
         </script>
         <script type="text/javascript" src="https://www.vesselfinder.com/aismap.js"></script>
+        <!--Sets the CSS of the map element to fit the window-->
         <script type="text/javascript">
             document.getElementById("vesselfinder").style.height = "92.75vh";
             document.getElementById("vesselfinder").style.verticalAlign = "bottom";
