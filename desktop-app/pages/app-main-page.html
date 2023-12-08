@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!--Redundant file-->
 <head>
     <title>Nautical Tools: Main Page</title>
     <script src="../javascript/app-open-external-link.js"></script>
@@ -18,7 +17,7 @@
         <div id="main-page-info">
             <span style="font-size: 24px;">What each page does: </span>
             <ul id="main-page-info-list">
-                <li>Nautical Converter: a series of useful unit conversions.</li>
+               <!--<li>Nautical Converter: a series of useful unit conversions.</li>-->
                 <li>Tide Calculator: a tool to calculate the height of tide given tide tables.</li>
                 <li>AIS: live ship position data.</li>
                 <li>OpenSeaMap: nautical charts with a variety of base map options as well as day/night line.</li>
@@ -26,15 +25,16 @@
             </ul>
             Note: sometimes pages may be hidden, to show more simply drag the buttons to move them across.
         </div>
-        <div id="main-page-legal-info">
-            <p>
-                OpenSeaMap is for reference only and should <span style="color:red; font-weight: bold;">NOT BE USED FOR NAVIGATIONAL PURPOSES</span> as it is not from a national hydrographic office. It also only covers certain areas.<br>
-                OpenSeaMap is liscenced under the Creative Commons Attribution-ShareAlike 2.0 license.<br>
-                AIS data provided <a onclick="openLink('https://www.vesselfinder.com/');" href="#">https://www.vesselfinder.com/</a>.<br>
-                Weather data provided by <a onclick="openLink('https://www.windy.com')" href="#">https://www.windy.com/</a>.
-            </p>
-            <p>Nautical Toolkit &copy; 2020 Paul Rankin Powered by <a onclick="openLink('https://www.electronjs.org/')" href="#">Electron JS</a></p>
-        </div>
-        </p>
+        <footer>
+            <div id="main-page-legal-info">
+                <p>
+                    OpenSeaMap is for reference only and should <span style="color:red; font-weight: bold;">NOT BE USED FOR NAVIGATIONAL PURPOSES</span> as it is not from a national hydrographic office. It also only covers certain areas.<br>
+                    OpenSeaMap is liscenced under the Creative Commons Attribution-ShareAlike 2.0 license.<br>
+                    AIS data provided <a onclick="openLink('https://www.vesselfinder.com/');" href="#">https://www.vesselfinder.com/</a>.<br>
+                    Weather data provided by <a onclick="openLink('https://www.windy.com')" href="#">https://www.windy.com/</a>.
+                </p>
+                <p>Nautical Toolkit &copy; 2020 Paul Rankin Powered by <a onclick="openLink('https://www.electronjs.org/')" href="#">Electron JS</a> Source code available on <a onclick="openLink('https://github.com/shipbiulder101/Nautical-Toolkit')">Github</a></p>
+            </div>
+        </footer>
     </div>
 </body>

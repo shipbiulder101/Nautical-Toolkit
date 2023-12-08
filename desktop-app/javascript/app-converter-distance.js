@@ -54,7 +54,7 @@ function convertDistance() {
 }
 
 function milesToNMiles(input){
-    var vresult = input * 0.86897624;
+    var result = input * 0.86897624;
     return round(result,1);
 }
 

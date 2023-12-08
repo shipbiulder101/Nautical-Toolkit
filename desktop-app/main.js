@@ -1,6 +1,7 @@
 const { app, BrowserWindow} = require('electron/main')
 const ipc = require('electron').ipcMain;
 const path = require('path');
+//stores weather the window is maximized
 var winState = { maximized: true };
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -71,7 +72,9 @@ app.on('activate', () => {
     }
 })
 
+//IPC handler for app controls these are being called by app-controls.js
 ipc.on('maximizeWindow', function(event){
+    //checks is the window is maximized and act acordingly
     if(winState.maximized == true){
       winState.maximized = false;
       win.setSize(1000, 800, false);
