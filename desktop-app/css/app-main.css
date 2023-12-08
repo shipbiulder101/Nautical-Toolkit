@@ -1,30 +1,4 @@
-#main-page-welcome-text{
-    font-size: 18px;
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-#main-page-legal-info{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    text-align: center;
+#page{
+    height: 100%;
     width: 100%;
-    font-size: 14px;
-    background-color: #202020;
-    box-sizing: border-box;
-}
-
-#main-page-info{
-    font-size: 18px;
-    font-size: 1vw;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-bottom: 1em;
-}
-
-#main-page-info-list{
-    list-style-position: inside;
-    margin-top: 0px;
-    margin-bottom: 0px;
 }

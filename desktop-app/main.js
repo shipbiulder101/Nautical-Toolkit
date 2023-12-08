@@ -1,5 +1,7 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow} = require('electron/main')
+const ipc = require('electron').ipcMain;
 const path = require('path');
+var winState = { maximized: true };
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -25,7 +27,8 @@ function createWindow() {
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
-            enableRemoteModule: true
+            enableRemoteModule: true,
+            webviewTag: true
         }
     })
 
@@ -66,6 +69,26 @@ app.on('activate', () => {
     if (win === null) {
         createWindow()
     }
+})
+
+ipc.on('maximizeWindow', function(event){
+    if(winState.maximized == true){
+      winState.maximized = false;
+      win.setSize(1000, 800, false);
+      console.log("Window un maximized");
+    } else{
+      winState.maximized = true;
+      win.maximize();
+      console.log("window maximized")
+    }
+})
+
+ipc.on('closeWindow', function(event){
+    win.close();
+})
+
+ipc.on('minimizeWindow',function(event){
+    win.minimize();
 })
 
 // In this file you can include the rest of your app's specific main process

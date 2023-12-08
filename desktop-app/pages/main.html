@@ -2,47 +2,33 @@
 <html>
 <head>
     <title>Nautical Tools</title>
-    <script>
-       window.$ = window.jQuery = require("jquery");
-    </script>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascript/app-menu-titlebar.js"></script>
     <script type="text/javascript" src="../javascript/app-controls.js"></script>
-    <script type="text/javascript" src="../javascript/app-open-external-link.js"></script>
+    <script type="text/javascript" src="../javascript/app-change-page.js" defer></script>
     <link rel="stylesheet" href="../css/app-style.css">
     <link rel="stylesheet" href="../css/app-main-menu.css">
     <link rel="stylesheet" href="../css/app-main.css">
 </head>
 <body>
-    <div id="app-titlebar"> </div>
-    <div id="app-main-menu"></div>
+    <div id="app-titlebar">
+        <img src="../res/app-icon.png" alt="" id="app-logo">  
+        <div id="app-title">Nautical Tools</div>
+        <div id="app-update">App updating</div>
+        <div id="titlebar-btns">
+            <button id="minimize-btn">-</button>
+            <button id="maximize-btn">&#9633</button>
+            <button id="close-btn">x</button>
+        </div>
+    </div>
+    <div id="app-main-menu">
+        <button class = "main-menu-btn" id = "main-menu-main-page" onclick="changeIframe('../pages/app-main-page.html')">Main Page</button>
+        <button class = "main-menu-btn" id = "main-menu-distance-btn" onclick="changeIframe('../pages/app-nautical-converter.html')" >Nautical Converter</button>
+        <button class = "main-menu-btn" id = "main-menu-tide-btn" onclick="changeIframe('../pages/app-tide-calculator.html')">Tide Calculator</button>
+        <button class = "main-menu-btn" id = "main-menu-ais-btn" onclick="changeIframe('../pages/app-ais-tracking.html')">AIS</button>
+        <button class="main-menu-btn" id="main-menu-map-btn" onclick="changeIframe('../pages/app-open-sea-map.html')">OpenSeaMap</button>
+        <button class="main-menu-btn" id="main-menu-weather-btn" onclick="changeIframe('../pages/app-weather.html')">Weather</button>
+    </div>
     <div id = "app-body">
-        <p id="main-page-welcome-text">
-            <span style="font-size: 26px;">Welcome to Nautical Tools an application that contains useful tools for anyone in the maritime comunity.</span><br>
-            The app has been designed to used by every member of the maritime communtiy from shore staff to yachtmaster to enthusiasts.<br>
-            The app has been specifically designed to be able to be run offline without an internet connection although certatin features of the app will not work.<br>
-            App updates will not occur until an internet connection has been established then the app will automatically update. <br>
-        </p>
-        <div id="main-page-info">
-            <span style="font-size: 24px;">What each page does: </span>
-            <ul id="main-page-info-list">
-                <li>Nautical Converter: a series of useful unit conversions.</li>
-                <li>Tide Calculator: a tool to calculate the height of tide given tide tables.</li>
-                <li>AIS: live ship position data.</li>
-                <li>OpenSeaMap: nautical charts with a variety of base map options as well as day/night line.</li>
-                <li>Weather: weather data from <a onclick="openLink('https://www.windy.com')" href="#">Windy</a>.</li>
-            </ul>
-            Note: sometimes pages may be hidden, to show more simply drag the buttons to move them across.
-        </div>
-        <div id="main-page-legal-info">
-            <p>
-                OpenSeaMap is for reference only and should <span style="color:red; font-weight: bold;">NOT BE USED FOR NAVIGATIONAL PURPOSES</span> as it is not from a national hydrographic office. It also only covers certain areas.<br>
-                OpenSeaMap is liscenced under the Creative Commons Attribution-ShareAlike 2.0 license.<br>
-                AIS data provided <a onclick="openLink('https://www.vesselfinder.com/');" href="#">https://www.vesselfinder.com/</a>.<br>
-                Weather data provided by <a onclick="openLink('https://www.windy.com')" href="#">https://www.windy.com/</a>.
-            </p>
-            <p>Nautical Toolkit &copy; 2020 Paul Rankin Powered by <a onclick="openLink('https://www.electronjs.org/')" href="#">Electron JS</a></p>
-        </div>
+        <iframe id="page" src="../pages/app-main-page.html" frameborder="0"></iframe>
     </div>
 </body>
 </html>

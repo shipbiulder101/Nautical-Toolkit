@@ -13,5 +13,5 @@ $(document).ready(function(){
 '<a href="../pages/app-open-sea-map.html"><button class="main-menu-btn" id="main-menu-map-btn">OpenSeaMap</button></a>'+
 '<a href="../pages/app-weather.html"><button class="main-menu-btn" id="main-menu-weather-btn">Weather</button></a>';
     $('#app-titlebar').append(titlebar);    
-    $('#app-main-menu').append(menuHtml);
+    //$('#app-main-menu').append(menuHtml);
 });
